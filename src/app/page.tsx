@@ -58,8 +58,8 @@ export default function LoginPage() {
             <CardFooter className="text-sm text-center flex-col gap-2 pt-4">
               <p className="text-muted-foreground">Are you a vendor?</p>
               <Button variant="link" asChild className="p-0 h-auto">
-                <Link href="/vendor-admin/dashboard">
-                  Go to Vendor Dashboard
+                <Link href="/vendor-admin/login">
+                  Go to Vendor Login
                 </Link>
               </Button>
             </CardFooter>

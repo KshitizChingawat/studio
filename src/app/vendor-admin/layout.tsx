@@ -22,6 +22,11 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 
 export default function VendorAdminLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+
+  if (pathname === '/vendor-admin/login') {
+    return <>{children}</>;
+  }
+  
   const isActive = (path: string) => pathname.startsWith(path);
 
   const navItems = [
@@ -68,7 +73,7 @@ export default function VendorAdminLayout({ children }: { children: React.ReactN
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
                <DropdownMenuItem asChild>
-                <Link href="/">Logout</Link>
+                <Link href="/vendor-admin/login">Logout</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
