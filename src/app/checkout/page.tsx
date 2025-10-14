@@ -75,23 +75,23 @@ export default function CheckoutPage() {
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="space-y-2">
-                                    <div className="flex justify-between"><span>Classic Burger x1</span><span>$8.99</span></div>
-                                    <div className="flex justify-between"><span>Fries x1</span><span>$3.49</span></div>
+                                    <div className="flex justify-between"><span>Classic Burger x1</span><span>₹8.99</span></div>
+                                    <div className="flex justify-between"><span>Fries x1</span><span>₹3.49</span></div>
                                 </div>
                                 <Separator />
                                 <div className="space-y-2">
-                                    <div className="flex justify-between text-muted-foreground"><span>Subtotal</span><span>${subtotal.toFixed(2)}</span></div>
-                                    <div className="flex justify-between text-muted-foreground"><span>Tax (8%)</span><span>${tax.toFixed(2)}</span></div>
+                                    <div className="flex justify-between text-muted-foreground"><span>Subtotal</span><span>₹{subtotal.toFixed(2)}</span></div>
+                                    <div className="flex justify-between text-muted-foreground"><span>Tax (8%)</span><span>₹{tax.toFixed(2)}</span></div>
                                 </div>
                                 <Separator />
                                 <div className="flex justify-between font-bold text-xl">
                                     <span>Total</span>
-                                    <span>${total.toFixed(2)}</span>
+                                    <span>₹{total.toFixed(2)}</span>
                                 </div>
                             </CardContent>
                             <CardFooter>
                                 <Button asChild className="w-full bg-accent hover:bg-accent/90">
-                                    <Link href="/confirmation/xyz123">Pay ${total.toFixed(2)}</Link>
+                                    <Link href="/confirmation/xyz123">Pay ₹{total.toFixed(2)}</Link>
                                 </Button>
                             </CardFooter>
                         </Card>

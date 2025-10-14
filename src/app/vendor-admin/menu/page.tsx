@@ -62,7 +62,7 @@ export default function MenuPage() {
                             {vendorMenu.map((item) => (
                                 <TableRow key={item.id}>
                                     <TableCell className="font-medium">{item.name}</TableCell>
-                                    <TableCell>${item.price.toFixed(2)}</TableCell>
+                                    <TableCell>₹{item.price.toFixed(2)}</TableCell>
                                     <TableCell className="text-right">
                                         <DropdownMenu>
                                             <DropdownMenuTrigger asChild>

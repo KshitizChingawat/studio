@@ -80,7 +80,7 @@ export function MenuAndCart({
                 </CardHeader>
                 <CardContent className="flex-1" />
                 <CardFooter className="flex justify-between items-center">
-                  <p className="font-semibold text-lg">${item.price.toFixed(2)}</p>
+                  <p className="font-semibold text-lg">₹{item.price.toFixed(2)}</p>
                   <Button onClick={() => addToCart(item)} variant="outline">
                     <Plus className="h-4 w-4 mr-2" /> Add
                   </Button>
@@ -105,7 +105,7 @@ export function MenuAndCart({
                   <div key={item.id} className="flex justify-between items-center">
                     <div>
                       <p className="font-medium">{item.name}</p>
-                      <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>
+                      <p className="text-sm text-muted-foreground">₹{item.price.toFixed(2)}</p>
                     </div>
                     <div className="flex items-center gap-2">
                       <Button variant="outline" size="icon" className="h-7 w-7" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
@@ -124,16 +124,16 @@ export function MenuAndCart({
             <div className="space-y-1">
               <div className="flex justify-between">
                 <p>Subtotal</p>
-                <p>${subtotal.toFixed(2)}</p>
+                <p>₹{subtotal.toFixed(2)}</p>
               </div>
               <div className="flex justify-between">
                 <p>Tax</p>
-                <p>${tax.toFixed(2)}</p>
+                <p>₹{tax.toFixed(2)}</p>
               </div>
               <Separator className="my-2" />
               <div className="flex justify-between font-bold text-lg">
                 <p>Total</p>
-                <p>${total.toFixed(2)}</p>
+                <p>₹{total.toFixed(2)}</p>
               </div>
             </div>
             <Separator />
