@@ -19,6 +19,12 @@
       "imageHint": "food basket"
     },
     {
+      "id": "vendor-login-hero-3",
+      "description": "A colorful assortment of fresh fruits",
+      "imageUrl": "https://picsum.photos/seed/fruits/1200/800",
+      "imageHint": "fruits basket"
+    },
+    {
       "id": "vendor-1",
       "description": "A vibrant burger joint with neon signs",
       "imageUrl": "https://picsum.photos/seed/v1/400/300",
