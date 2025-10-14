@@ -8,7 +8,7 @@ import { Logo } from '@/components/logo';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function VendorLoginPage() {
-  const bgImage = PlaceHolderImages.find(img => img.id === 'vendor-login-hero-4');
+  const bgImage = PlaceHolderImages.find(img => img.id === 'vendor-login-hero-2');
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center relative">
