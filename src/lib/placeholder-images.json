@@ -7,6 +7,12 @@
       "imageHint": "campus life"
     },
     {
+      "id": "vendor-login-hero",
+      "description": "A blurry picture of a kitchen with some food on a counter.",
+      "imageUrl": "https://picsum.photos/seed/vlogin/1200/800",
+      "imageHint": "restaurant kitchen"
+    },
+    {
       "id": "vendor-1",
       "description": "A vibrant burger joint with neon signs",
       "imageUrl": "https://picsum.photos/seed/v1/400/300",
