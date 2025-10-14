@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "login-hero",
+      "description": "Students eating together on a university campus",
+      "imageUrl": "https://picsum.photos/seed/login/1200/800",
+      "imageHint": "campus life"
+    },
+    {
+      "id": "vendor-1",
+      "description": "A vibrant burger joint with neon signs",
+      "imageUrl": "https://picsum.photos/seed/v1/400/300",
+      "imageHint": "burger restaurant"
+    },
+    {
+      "id": "vendor-2",
+      "description": "A classic Italian pizza place with checkered tablecloths",
+      "imageUrl": "https://picsum.photos/seed/v2/400/300",
+      "imageHint": "pizza shop"
+    },
+    {
+      "id": "vendor-3",
+      "description": "A bright and modern salad bar with fresh ingredients",
+      "imageUrl": "https://picsum.photos/seed/v3/400/300",
+      "imageHint": "salad bar"
+    },
+    {
+      "id": "vendor-4",
+      "description": "A cozy coffee shop with latte art and pastries",
+      "imageUrl": "https://picsum.photos/seed/v4/400/300",
+      "imageHint": "coffee shop"
+    },
+    {
+      "id": "menu-burger",
+      "description": "A juicy cheeseburger with lettuce and tomato",
+      "imageUrl": "https://picsum.photos/seed/m1/100/100",
+      "imageHint": "cheeseburger"
+    },
+    {
+      "id": "menu-fries",
+      "description": "A basket of crispy golden french fries",
+      "imageUrl": "https://picsum.photos/seed/m2/100/100",
+      "imageHint": "french fries"
+    },
+    {
+      "id": "menu-shake",
+      "description": "A chocolate milkshake with whipped cream",
+      "imageUrl": "https://picsum.photos/seed/m6/100/100",
+      "imageHint": "chocolate milkshake"
+    },
+    {
+      "id": "menu-pizza",
+      "description": "A slice of pepperoni pizza with melted cheese",
+      "imageUrl": "https://picsum.photos/seed/m3/100/100",
+      "imageHint": "pizza slice"
+    },
+    {
+      "id": "menu-knots",
+      "description": "A bowl of garlic knots with marinara sauce",
+      "imageUrl": "https://picsum.photos/seed/m7/100/100",
+      "imageHint": "garlic knots"
+    },
+    {
+      "id": "menu-salad",
+      "description": "A fresh Caesar salad with croutons and dressing",
+      "imageUrl": "https://picsum.photos/seed/m4/100/100",
+      "imageHint": "caesar salad"
+    },
+    {
+      "id": "menu-wrap",
+      "description": "A grilled chicken wrap",
+      "imageUrl": "https://picsum.photos/seed/m8/100/100",
+      "imageHint": "chicken wrap"
+    },
+    {
+      "id": "menu-coffee",
+      "description": "A hot latte in a ceramic mug with latte art",
+      "imageUrl": "https://picsum.photos/seed/m5/100/100",
+      "imageHint": "latte coffee"
+    },
+    {
+      "id": "menu-muffin",
+      "description": "A blueberry muffin on a plate",
+      "imageUrl": "https://picsum.photos/seed/m9/100/100",
+      "imageHint": "blueberry muffin"
+    }
+  ]
 }
