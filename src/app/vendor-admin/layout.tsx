@@ -16,7 +16,6 @@ import {
   SidebarTrigger,
   SidebarFooter,
 } from '@/components/ui/sidebar';
-import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 
@@ -41,7 +40,7 @@ export default function VendorAdminLayout({ children }: { children: React.ReactN
       <Sidebar collapsible="icon" className="dark bg-sidebar text-sidebar-foreground">
         <SidebarHeader>
            <div className="flex items-center justify-center h-12 group-data-[collapsible=icon]:h-10 group-data-[collapsible=icon]:w-10">
-              <UtensilsCrossedIcon className="h-6 w-6 text-primary transition-all group-data-[collapsible=icon]:h-5 group-data-[collapsible=icon]:w-5" />
+              <Home className="h-6 w-6 text-primary transition-all group-data-[collapsible=icon]:h-5 group-data-[collapsible=icon]:w-5" />
               <div className="text-xl font-bold ml-2 transition-opacity opacity-100 group-data-[collapsible=icon]:opacity-0">CampusPreorder</div>
            </div>
         </SidebarHeader>
@@ -87,26 +86,4 @@ export default function VendorAdminLayout({ children }: { children: React.ReactN
       </SidebarInset>
     </SidebarProvider>
   );
-}
-
-function UtensilsCrossedIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8" />
-      <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7" />
-      <path d="m2.1 21.8 6.4-6.3" />
-      <path d="m19 5-7 7" />
-    </svg>
-  )
 }
