@@ -13,6 +13,12 @@
       "imageHint": "restaurant kitchen"
     },
     {
+      "id": "vendor-login-hero-2",
+      "description": "A basket of fresh produce and food items.",
+      "imageUrl": "https://picsum.photos/seed/vlogin2/1200/800",
+      "imageHint": "food basket"
+    },
+    {
       "id": "vendor-1",
       "description": "A vibrant burger joint with neon signs",
       "imageUrl": "https://picsum.photos/seed/v1/400/300",
