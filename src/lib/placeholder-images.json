@@ -25,6 +25,12 @@
       "imageHint": "fruits basket"
     },
     {
+      "id": "vendor-login-hero-4",
+      "description": "A bowl of colorful fruits including apples, grapes and an orange.",
+      "imageUrl": "https://storage.googleapis.com/aifirebase/images/YV64gJ0T_L.jpg",
+      "imageHint": "fruit bowl"
+    },
+    {
       "id": "vendor-1",
       "description": "A vibrant burger joint with neon signs",
       "imageUrl": "https://picsum.photos/seed/v1/400/300",
