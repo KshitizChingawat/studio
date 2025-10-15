@@ -36,7 +36,7 @@ export default function ConfirmationPage({ params }: { params: { orderId: string
                             </div>
                              <div className="flex justify-between">
                                 <span className="text-muted-foreground">Total Paid</span>
-                                <span className="font-medium">₹14.56</span>
+                                <span className="font-medium">₹145.58</span>
                             </div>
                         </div>
                     </CardContent>

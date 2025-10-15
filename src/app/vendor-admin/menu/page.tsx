@@ -35,7 +35,7 @@ export default function MenuPage() {
                             </div>
                             <div className="grid grid-cols-4 items-center gap-4">
                                 <Label htmlFor="price" className="text-right">Price</Label>
-                                <Input id="price" type="number" placeholder="8.99" className="col-span-3" />
+                                <Input id="price" type="number" placeholder="89.90" className="col-span-3" />
                             </div>
                              <div className="grid grid-cols-4 items-center gap-4">
                                 <Label htmlFor="description" className="text-right">Description</Label>

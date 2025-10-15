@@ -5,16 +5,16 @@ import { DollarSign, Package, Users, Activity } from "lucide-react";
 
 export default function VendorDashboard() {
   const stats = [
-    { title: "Today's Revenue", value: "₹1,250.00", icon: DollarSign, change: "+12.5%" },
+    { title: "Today's Revenue", value: "₹12500.00", icon: DollarSign, change: "+12.5%" },
     { title: "Today's Orders", value: "82", icon: Package, change: "+5.1%" },
     { title: "New Customers", value: "12", icon: Users, change: "+2" },
     { title: "Avg. Prep Time", value: "8m 15s", icon: Activity, change: "-30s" },
   ];
 
   const recentOrders = [
-    { id: "ORD001", customer: "Jane Doe", total: "₹22.50", status: "Picked Up" },
-    { id: "ORD002", customer: "John Smith", total: "₹15.00", status: "In Progress" },
-    { id: "ORD003", customer: "Sam Wilson", total: "₹8.99", status: "Pending" },
+    { id: "ORD001", customer: "Jane Doe", total: "₹225.00", status: "Picked Up" },
+    { id: "ORD002", customer: "John Smith", total: "₹150.00", status: "In Progress" },
+    { id: "ORD003", customer: "Sam Wilson", total: "₹89.90", status: "Pending" },
   ];
 
   return (

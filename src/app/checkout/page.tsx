@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export default function CheckoutPage() {
     // Mock data
-    const subtotal = 13.48;
-    const tax = 1.08;
-    const total = 14.56;
+    const subtotal = 134.8;
+    const tax = 10.78;
+    const total = 145.58;
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -75,8 +75,8 @@ export default function CheckoutPage() {
                             </CardHeader>
                             <CardContent className="space-y-4">
                                 <div className="space-y-2">
-                                    <div className="flex justify-between"><span>Classic Burger x1</span><span>₹8.99</span></div>
-                                    <div className="flex justify-between"><span>Fries x1</span><span>₹3.49</span></div>
+                                    <div className="flex justify-between"><span>Classic Burger x1</span><span>₹89.90</span></div>
+                                    <div className="flex justify-between"><span>Fries x1</span><span>₹34.90</span></div>
                                 </div>
                                 <Separator />
                                 <div className="space-y-2">
