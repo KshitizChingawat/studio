@@ -8,7 +8,7 @@ import { Menu } from 'lucide-react';
 
 const navLinks = [
     { href: "/dashboard", label: "Home" },
-    { href: "#", label: "My Orders" },
+    { href: "/orders", label: "My Orders" },
     { href: "#", label: "Settings" },
 ];
 
@@ -59,7 +59,9 @@ export function Header() {
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>My Orders</DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="/orders">My Orders</Link>
+            </DropdownMenuItem>
             <DropdownMenuItem>Settings</DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>

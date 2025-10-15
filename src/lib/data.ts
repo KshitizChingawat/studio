@@ -23,22 +23,22 @@ export type MenuItem = {
 
 export const menuItems: Record<string, MenuItem[]> = {
   'vendor-1': [
-    { id: 'item-1', name: 'Classic Burger', price: 89.90, imageId: 'menu-burger', description: "A juicy beef patty with cheese, lettuce, tomato, and our special sauce." },
-    { id: 'item-2', name: 'Fries', price: 34.90, imageId: 'menu-fries', description: "Crispy golden fries, lightly salted." },
-    { id: 'item-3', name: 'Chocolate Shake', price: 49.90, imageId: 'menu-shake', description: "A rich and creamy chocolate milkshake." },
+    { id: 'item-1', name: 'Classic Burger', price: 899, imageId: 'menu-burger', description: "A juicy beef patty with cheese, lettuce, tomato, and our special sauce." },
+    { id: 'item-2', name: 'Fries', price: 349, imageId: 'menu-fries', description: "Crispy golden fries, lightly salted." },
+    { id: 'item-3', name: 'Chocolate Shake', price: 499, imageId: 'menu-shake', description: "A rich and creamy chocolate milkshake." },
   ],
   'vendor-2': [
-    { id: 'item-4', name: 'Pepperoni Slice', price: 45.00, imageId: 'menu-pizza', description: "A classic slice with zesty pepperoni and mozzarella." },
-    { id: 'item-5', name: 'Cheese Slice', price: 40.00, imageId: 'menu-pizza', description: "A simple, delicious slice with our signature cheese blend." },
-    { id: 'item-6', name: 'Garlic Knots', price: 50.00, imageId: 'menu-knots', description: "Warm, buttery garlic knots served with marinara sauce." },
+    { id: 'item-4', name: 'Pepperoni Slice', price: 450, imageId: 'menu-pizza', description: "A classic slice with zesty pepperoni and mozzarella." },
+    { id: 'item-5', name: 'Cheese Slice', price: 400, imageId: 'menu-pizza', description: "A simple, delicious slice with our signature cheese blend." },
+    { id: 'item-6', name: 'Garlic Knots', price: 500, imageId: 'menu-knots', description: "Warm, buttery garlic knots served with marinara sauce." },
   ],
    'vendor-3': [
-    { id: 'item-7', name: 'Caesar Salad', price: 95.00, imageId: 'menu-salad', description: "Crisp romaine, parmesan, croutons, and Caesar dressing." },
-    { id: 'item-8', name: 'Chicken Wrap', price: 105.00, imageId: 'menu-wrap', description: "Grilled chicken, lettuce, tomato, and ranch in a flour tortilla." },
+    { id: 'item-7', name: 'Caesar Salad', price: 950, imageId: 'menu-salad', description: "Crisp romaine, parmesan, croutons, and Caesar dressing." },
+    { id: 'item-8', name: 'Chicken Wrap', price: 1050, imageId: 'menu-wrap', description: "Grilled chicken, lettuce, tomato, and ranch in a flour tortilla." },
   ],
    'vendor-4': [
-    { id: 'item-9', name: 'Iced Latte', price: 47.50, imageId: 'menu-coffee', description: "Chilled espresso with milk, served over ice." },
-    { id: 'item-10', name: 'Blueberry Muffin', price: 32.50, imageId: 'menu-muffin', description: "A fluffy muffin bursting with fresh blueberries." },
+    { id: 'item-9', name: 'Iced Latte', price: 475, imageId: 'menu-coffee', description: "Chilled espresso with milk, served over ice." },
+    { id: 'item-10', name: 'Blueberry Muffin', price: 325, imageId: 'menu-muffin', description: "A fluffy muffin bursting with fresh blueberries." },
   ],
 };
 
@@ -71,3 +71,51 @@ export const kdsOrders = {
     ]
   }
 };
+
+export type Order = {
+  id: string;
+  date: string;
+  status: 'In Progress' | 'Picked Up' | 'Cancelled';
+  total: number;
+  items: {
+    id: string;
+    name: string;
+    quantity: number;
+  }[];
+  pickupTime: string;
+};
+
+export const orders: Order[] = [
+    {
+        id: 'xyz123',
+        date: new Date(Date.now() - 2 * 60 * 1000).toISOString(),
+        status: 'In Progress',
+        total: 1455.80,
+        pickupTime: "11:30 AM",
+        items: [
+            { id: 'item-1', name: 'Classic Burger', quantity: 1 },
+            { id: 'item-2', name: 'Fries', quantity: 1 },
+        ],
+    },
+    {
+        id: 'abc789',
+        date: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(),
+        status: 'Picked Up',
+        total: 950,
+        pickupTime: "Yesterday 1:00 PM",
+        items: [
+            { id: 'item-7', name: 'Caesar Salad', quantity: 1 },
+        ],
+    },
+    {
+        id: 'def456',
+        date: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+        status: 'Picked Up',
+        total: 1300,
+        pickupTime: "2 days ago 4:15 PM",
+        items: [
+            { id: 'item-4', name: 'Pepperoni Slice', quantity: 2 },
+            { id: 'item-6', name: 'Garlic Knots', quantity: 1 },
+        ],
+    }
+]
