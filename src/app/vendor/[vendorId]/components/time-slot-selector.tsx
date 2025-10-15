@@ -1,13 +1,12 @@
 'use client';
 
 import { Loader2 } from 'lucide-react';
-import React from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import React, { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { suggestOptimalPickupTimes } from '@/ai/flows/suggest-optimal-pickup-times';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Card } from '@/components/ui/card';
 
 const initialState = {
   suggestedPickupTimes: [],
@@ -67,7 +66,7 @@ function SubmitButton({ disabled, hasSuggestions }: { disabled: boolean; hasSugg
 }
 
 export function TimeSlotSelector({ vendorId, cartItems }: { vendorId: string; cartItems: { id: string }[] }) {
-  const [state, formAction] = useFormState(suggestTimesAction, initialState);
+  const [state, formAction] = useActionState(suggestTimesAction, initialState);
   const { pending } = useFormStatus();
 
   return (
