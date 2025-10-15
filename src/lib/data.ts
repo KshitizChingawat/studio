@@ -1,16 +1,16 @@
 
 export const campuses = [
   { id: 'medi-caps', name: 'Medi-Caps University', emailPlaceholder: 'student@medicaps.ac.in' },
-  { id: 'ips', name: 'IPS Academy', emailPlaceholder: 'student@ips.in' },
-  { id: 'acropolis', name: 'Acropolis Institute', emailPlaceholder: 'student@acropolis.in' },
-  { id: 'sage', name: 'SAGE University', emailPlaceholder: 'student@sage.in' },
+  { id: 'ips', name: 'IPS University', emailPlaceholder: 'student@ips.in' },
+  { id: 'acropolis', name: 'Acropolis University', emailPlaceholder: 'student@acropolis.in' },
+  { id: 'sage', name: 'Sage University', emailPlaceholder: 'student@sage.in' },
 ];
 
 export const vendors = [
-  { id: 'vendor-1', name: 'The Burger Barn', campusId: 'uni-1', cuisine: 'American', imageId: 'vendor-1' },
-  { id: 'vendor-2', name: 'Pizza Palace', campusId: 'uni-1', cuisine: 'Italian', imageId: 'vendor-2' },
-  { id: 'vendor-3', name: 'Green Leaf Salads', campusId: 'uni-1', cuisine: 'Healthy', imageId: 'vendor-3' },
-  { id: 'vendor-4', name: 'Morning Buzz Coffee', campusId: 'uni-2', cuisine: 'Cafe', imageId: 'vendor-4' },
+  { id: 'vendor-1', name: 'Food Court', campusId: 'uni-1', cuisine: 'American', imageId: 'vendor-1' },
+  { id: 'vendor-2', name: 'Canteen', campusId: 'uni-1', cuisine: 'Italian', imageId: 'vendor-2' },
+  { id: 'vendor-3', name: 'Mintoo', campusId: 'uni-1', cuisine: 'Healthy', imageId: 'vendor-3' },
+  { id: 'vendor-4', name: 'CSB', campusId: 'uni-2', cuisine: 'Cafe', imageId: 'vendor-4' },
 ];
 
 export type MenuItem = {
