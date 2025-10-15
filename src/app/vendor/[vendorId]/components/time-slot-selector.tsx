@@ -30,6 +30,7 @@ async function suggestTimesAction(prevState: any, formData: FormData) {
       const now = new Date();
       return {
         suggestedPickupTimes: [
+          'Immediately',
           new Date(now.getTime() + 15 * 60000).toISOString(),
           new Date(now.getTime() + 25 * 60000).toISOString(),
           new Date(now.getTime() + 40 * 60000).toISOString(),
@@ -37,12 +38,15 @@ async function suggestTimesAction(prevState: any, formData: FormData) {
       };
     }
 
-    return result;
+    return {
+      suggestedPickupTimes: ['Immediately', ...result.suggestedPickupTimes],
+    };
   } catch (error) {
     console.error("Error suggesting pickup times:", error);
     const now = new Date();
     return {
         suggestedPickupTimes: [
+          'Immediately',
           new Date(now.getTime() + 15 * 60000).toISOString(),
           new Date(now.getTime() + 25 * 60000).toISOString(),
           new Date(now.getTime() + 40 * 60000).toISOString(),
@@ -98,10 +102,12 @@ export function TimeSlotSelector({ vendorId, cartItems }: { vendorId: string; ca
                   className="border-muted-foreground"
                 />
                 <span>
-                  {new Date(time).toLocaleTimeString([], {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                  })}
+                  {time === 'Immediately'
+                    ? 'Immediately'
+                    : new Date(time).toLocaleTimeString([], {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                      })}
                 </span>
               </Label>
             ))}
