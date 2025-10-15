@@ -1,3 +1,7 @@
+
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +15,15 @@ import { campuses } from '@/lib/data';
 
 export default function LoginPage() {
   const heroImage = PlaceHolderImages.find(img => img.id === 'login-hero');
+  const [selectedCampusId, setSelectedCampusId] = useState('');
+
+  const handleCampusChange = (campusId: string) => {
+    setSelectedCampusId(campusId);
+  };
+
+  const selectedCampus = campuses.find(c => c.id === selectedCampusId);
+  const emailPlaceholder = selectedCampus?.emailPlaceholder || 'your.id@university.edu';
+
 
   return (
     <div className="w-full min-h-screen lg:grid lg:grid-cols-2">
@@ -30,7 +43,7 @@ export default function LoginPage() {
               <div className="grid gap-4">
                 <div className="grid gap-2">
                   <Label htmlFor="campus">Campus</Label>
-                  <Select>
+                  <Select onValueChange={handleCampusChange}>
                     <SelectTrigger id="campus" className="w-full">
                       <SelectValue placeholder="Select your campus" />
                     </SelectTrigger>
@@ -46,7 +59,7 @@ export default function LoginPage() {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your.id@university.edu"
+                    placeholder={emailPlaceholder}
                     required
                   />
                 </div>

@@ -1,7 +1,9 @@
+
 export const campuses = [
-  { id: 'uni-1', name: 'State University' },
-  { id: 'uni-2', name: 'City College' },
-  { id: 'uni-3', name: 'Tech Institute' },
+  { id: 'medi-caps', name: 'Medi-Caps University', emailPlaceholder: 'student@medicaps.ac.in' },
+  { id: 'ips', name: 'IPS Academy', emailPlaceholder: 'student@ips.in' },
+  { id: 'acropolis', name: 'Acropolis Institute', emailPlaceholder: 'student@acropolis.in' },
+  { id: 'sage', name: 'SAGE University', emailPlaceholder: 'student@sage.in' },
 ];
 
 export const vendors = [
