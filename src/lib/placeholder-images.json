@@ -15,79 +15,79 @@
     {
       "id": "vendor-1",
       "description": "Modern and bustling university food court during lunchtime.",
-      "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmb29kJTIwY291cnR8ZW58MHx8fHwxNzYzNDk4MTEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       "imageHint": "food court"
     },
     {
       "id": "vendor-2",
       "description": "A classic Italian pizza place with checkered tablecloths",
-      "imageUrl": "https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=3613640545528901",
-      "imageHint": "pizza shop"
+      "imageUrl": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageHint": "pizza restaurant"
     },
     {
       "id": "vendor-3",
       "description": "A bright and modern salad bar with fresh ingredients",
-      "imageUrl": "https://images.unsplash.com/photo-1592417817098-8fdc3d1542a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzYWxhZCUyMGJhciUyMHJlc3RhdXJhbnR8ZW58MHx8fHwxNzYzNTUyMzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "salad bar"
+      "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      "imageHint": "fresh salad"
     },
     {
       "id": "vendor-4",
       "description": "A cozy, rustic coffee shop interior with warm lighting.",
-      "imageUrl": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2ZmZWUlMjBzaG9wfGVufDB8fHx8MTc2MzQ2OTkwMXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee shop"
+      "imageUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+      "imageHint": "cozy cafe"
     },
     {
       "id": "menu-burger",
       "description": "A juicy, gourmet cheeseburger with a side of crispy fries on a wooden board.",
-      "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNzYzNDU2MzUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
       "imageHint": "gourmet burger"
     },
     {
       "id": "menu-fries",
       "description": "A rustic basket of perfectly golden and crispy french fries.",
-      "imageUrl": "https://images.unsplash.com/photo-1585109649139-366815a0c19f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmcmVuY2glMjBmcmllc3xlbnwwfHx8fDE3NjM1NTQ4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1576107232684-c7e3e3c15875?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       "imageHint": "crispy fries"
     },
     {
       "id": "menu-shake",
       "description": "A decadent chocolate milkshake topped with whipped cream and a cherry.",
-      "imageUrl": "https://images.unsplash.com/photo-1624827299102-12623a85429e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaG9jb2xhdGUlMjBtaWxrc2hha2V8ZW58MHx8fHwxNzYzNTQyNDcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       "imageHint": "chocolate milkshake"
     },
     {
       "id": "menu-pizza",
       "description": "A delicious slice of pepperoni pizza with cheese stretching from it.",
-      "imageUrl": "https://images.unsplash.com/photo-1595708684082-a846a4b39c65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaXp6YSUyMHNsaWNlfGVufDB8fHx8MTc2MzQ5MDE3OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pizza slice"
+      "imageUrl": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80",
+      "imageHint": "pepperoni pizza"
     },
     {
       "id": "menu-knots",
       "description": "A warm, freshly-baked batch of garlic knots drizzled with butter and herbs.",
-      "imageUrl": "https://images.unsplash.com/photo-1628139397441-7493b5849883?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYXJsaWMlMjBrbm90c3xlbnwwfHx8fDE3NjM1NTQ4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1628139397441-7493b5849883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80",
       "imageHint": "garlic knots"
     },
     {
       "id": "menu-salad",
       "description": "A vibrant and healthy Caesar salad with grilled chicken strips.",
-      "imageUrl": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYWVzYXIlMjBzYWxhZHxlbnwwfHx8fDE3NjM0NTMwNTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       "imageHint": "caesar salad"
     },
     {
       "id": "menu-wrap",
       "description": "A cut-open grilled chicken wrap showing fresh lettuce, tomato, and fillings.",
-      "imageUrl": "https://images.unsplash.com/photo-1625442567433-4d2c49c7b80c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjaGlja2VuJTIwd3JhcHxlbnwwfHx8fDE3NjM1NTQ4NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1607432639414-7a5932c1804a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       "imageHint": "chicken wrap"
     },
     {
       "id": "menu-coffee",
       "description": "An iced latte in a tall glass, showing layers of coffee and milk.",
-      "imageUrl": "https://images.unsplash.com/photo-1572498288239-c18a24b3b156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxJY2VkJTIwTGF0dGV8ZW58MHx8fHwxNzYzNTQ4Njc2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1517701550927-200fc5e37356?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
       "imageHint": "iced latte"
     },
     {
       "id": "menu-muffin",
       "description": "A freshly-baked blueberry muffin with a golden-brown top, on a cafe table.",
-      "imageUrl": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxibHVlYmVycnklMjBtdWZmaW58ZW58MHx8fHwxNzYzNTIzNzQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1554519934-2d6f6609a820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       "imageHint": "blueberry muffin"
     }
   ]
