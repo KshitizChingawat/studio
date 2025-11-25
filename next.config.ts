@@ -43,11 +43,11 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    allowedDevOrigins: [
+  },
+  allowedDevOrigins: [
       'https://*.googleusercontent.com',
       'https://*.cloudworkstations.dev',
-    ],
-  },
+  ],
 };
 
 export default nextConfig;
