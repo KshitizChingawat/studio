@@ -31,12 +31,6 @@
       "imageHint": "salad bar"
     },
     {
-      "id": "vendor-4",
-      "description": "A vibrant and busy Indian tea stall with people enjoying chai and snacks.",
-      "imageUrl": "https://images.unsplash.com/photo-1594932402983-36d54c463a89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxDaGFpJTIwU3V0dGElMjBCYXJ8ZW58MHx8fHwxNzYzNzIyMTg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chai stall"
-    },
-    {
       "id": "menu-burger",
       "description": "A juicy, gourmet cheeseburger with a side of crispy fries on a wooden board.",
       "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNzYzNjUzOTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",

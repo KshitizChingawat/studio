@@ -10,7 +10,6 @@ export const vendors = [
   { id: 'vendor-1', name: 'Food Court', campusId: 'uni-1', cuisine: 'American', imageId: 'vendor-1' },
   { id: 'vendor-2', name: 'Canteen', campusId: 'uni-1', cuisine: 'Italian', imageId: 'vendor-2' },
   { id: 'vendor-3', name: 'Mintoo', campusId: 'uni-1', cuisine: 'Healthy', imageId: 'vendor-3' },
-  { id: 'vendor-4', name: 'CSB', campusId: 'uni-2', cuisine: 'Cafe', imageId: 'vendor-4' },
 ];
 
 export type MenuItem = {
@@ -35,10 +34,6 @@ export const menuItems: Record<string, MenuItem[]> = {
    'vendor-3': [
     { id: 'item-7', name: 'Caesar Salad', price: 950, imageId: 'menu-salad', description: "Crisp romaine, parmesan, croutons, and Caesar dressing." },
     { id: 'item-8', name: 'Chicken Wrap', price: 1050, imageId: 'menu-wrap', description: "Grilled chicken, lettuce, tomato, and ranch in a flour tortilla." },
-  ],
-   'vendor-4': [
-    { id: 'item-9', name: 'Iced Latte', price: 475, imageId: 'menu-coffee', description: "Chilled espresso with milk, served over ice." },
-    { id: 'item-10', name: 'Blueberry Muffin', price: 325, imageId: 'menu-muffin', description: "A fluffy muffin bursting with fresh blueberries." },
   ],
 };
 
