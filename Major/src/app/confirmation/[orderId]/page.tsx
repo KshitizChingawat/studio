@@ -8,8 +8,9 @@ import { CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export default function ConfirmationPage({ params }: { params: { orderId: string } }) {
-    const order = orders.find(o => o.id === params.orderId);
+export default async function ConfirmationPage({ params }: { params: Promise<{ orderId: string }> }) {
+    const { orderId } = await params;
+    const order = orders.find(o => o.id === orderId);
 
     if (!order) {
         notFound();

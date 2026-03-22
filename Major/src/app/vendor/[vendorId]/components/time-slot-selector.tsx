@@ -8,11 +8,15 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
-const initialState = {
+type SuggestPickupState = {
+  suggestedPickupTimes: string[];
+};
+
+const initialState: SuggestPickupState = {
   suggestedPickupTimes: [],
 };
 
-async function suggestTimesAction(prevState: any, formData: FormData) {
+async function suggestTimesAction(_prevState: SuggestPickupState, formData: FormData): Promise<SuggestPickupState> {
   const vendorId = formData.get('vendorId') as string;
   const menuItems = formData.getAll('menuItems').map(String);
   const currentTime = new Date().toISOString();

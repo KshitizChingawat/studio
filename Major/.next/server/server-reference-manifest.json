@@ -1,5 +1,1 @@
-{
-  "node": {},
-  "edge": {},
-  "encryptionKey": "x5JO99czmd6FtX0Ifq9b+IHMExNJMOXj+zSMZrlCTco="
-}
+{"node":{"400446eb4480917387ec24f4121b427d8e6eb4822a":{"workers":{"app/vendor/[vendorId]/page":{"moduleId":"64964","async":false}},"layer":{"app/vendor/[vendorId]/page":"action-browser"}}},"edge":{},"encryptionKey":"Nj71Ruuiuvh5VP4/KoJ581e+GS5OwcJHVlrX21gRXSQ="}

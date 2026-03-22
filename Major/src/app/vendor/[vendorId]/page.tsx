@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { Header } from '@/components/header';
 import { MenuAndCart } from './components/menu-and-cart';
 
-export default function VendorPage({ params }: { params: { vendorId: string } }) {
-  const { vendorId } = params;
+export default async function VendorPage({ params }: { params: Promise<{ vendorId: string }> }) {
+  const { vendorId } = await params;
   const vendor = vendors.find(v => v.id === vendorId);
   const currentMenuItems = menuItems[vendorId] as MenuItem[] | undefined;
   

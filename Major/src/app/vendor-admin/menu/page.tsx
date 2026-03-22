@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { menuItems } from "@/lib/data";
 import { PlusCircle, MoreHorizontal } from "lucide-react";
@@ -25,7 +25,7 @@ export default function MenuPage() {
                         <DialogHeader>
                             <DialogTitle>Add New Menu Item</DialogTitle>
                             <DialogDescription>
-                                Fill in the details for the new item. Click save when you're done.
+                                Fill in the details for the new item. Click save when you&apos;re done.
                             </DialogDescription>
                         </DialogHeader>
                         <div className="grid gap-4 py-4">
