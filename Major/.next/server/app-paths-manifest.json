@@ -1,0 +1,9 @@
+{
+  "/dashboard/page": "app/dashboard/page.js",
+  "/page": "app/page.js",
+  "/vendor-admin/dashboard/page": "app/vendor-admin/dashboard/page.js",
+  "/vendor-admin/kds/page": "app/vendor-admin/kds/page.js",
+  "/vendor-admin/login/page": "app/vendor-admin/login/page.js",
+  "/vendor-admin/menu/page": "app/vendor-admin/menu/page.js",
+  "/vendor-admin/scanner/page": "app/vendor-admin/scanner/page.js"
+}
