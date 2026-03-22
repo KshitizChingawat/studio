@@ -6,6 +6,7 @@ import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { normalizeBaseUrl } from '@/lib/env';
 
 type SuggestPickupState = {
   suggestedPickupTimes: string[];
@@ -21,7 +22,7 @@ async function suggestTimesAction(_prevState: SuggestPickupState, formData: Form
   const currentTime = new Date().toISOString();
 
   try {
-    const response = await fetch(`${process.env.API_BASE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000'}/api/pickup-times`, {
+    const response = await fetch(`${normalizeBaseUrl(process.env.NEXT_PUBLIC_API_URL || process.env.API_BASE_URL)}/api/pickup-times`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -42,12 +43,14 @@ async function suggestTimesAction(_prevState: SuggestPickupState, formData: Form
     // Fallback for demo purposes if AI returns nothing
     if (!result || !result.suggestedPickupTimes || result.suggestedPickupTimes.length === 0) {
       const now = new Date();
+      const remainder = now.getMinutes() % 15;
+      const firstOffset = remainder === 0 ? 15 : 15 - remainder;
+      const firstSlot = new Date(now.getTime() + firstOffset * 60000);
       return {
         suggestedPickupTimes: [
-          'Immediately',
-          new Date(now.getTime() + 15 * 60000).toISOString(),
-          new Date(now.getTime() + 25 * 60000).toISOString(),
-          new Date(now.getTime() + 40 * 60000).toISOString(),
+          firstSlot.toISOString(),
+          new Date(firstSlot.getTime() + 15 * 60000).toISOString(),
+          new Date(firstSlot.getTime() + 30 * 60000).toISOString(),
         ],
       };
     }
@@ -58,12 +61,14 @@ async function suggestTimesAction(_prevState: SuggestPickupState, formData: Form
   } catch (error) {
     console.error("Error suggesting pickup times:", error);
     const now = new Date();
+    const remainder = now.getMinutes() % 15;
+    const firstOffset = remainder === 0 ? 15 : 15 - remainder;
+    const firstSlot = new Date(now.getTime() + firstOffset * 60000);
     return {
         suggestedPickupTimes: [
-          'Immediately',
-          new Date(now.getTime() + 15 * 60000).toISOString(),
-          new Date(now.getTime() + 25 * 60000).toISOString(),
-          new Date(now.getTime() + 40 * 60000).toISOString(),
+          firstSlot.toISOString(),
+          new Date(firstSlot.getTime() + 15 * 60000).toISOString(),
+          new Date(firstSlot.getTime() + 30 * 60000).toISOString(),
         ],
       };
   }
@@ -116,12 +121,10 @@ export function TimeSlotSelector({ vendorId, cartItems }: { vendorId: string; ca
                   className="border-muted-foreground"
                 />
                 <span>
-                  {time === 'Immediately'
-                    ? 'Immediately'
-                    : new Date(time).toLocaleTimeString([], {
-                        hour: 'numeric',
-                        minute: '2-digit',
-                      })}
+                  {new Date(time).toLocaleTimeString([], {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                  })}
                 </span>
               </Label>
             ))}

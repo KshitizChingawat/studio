@@ -5,9 +5,10 @@ import { Badge } from '@/components/ui/badge';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Header } from '@/components/header';
 import { getVendors } from '@/lib/api';
+import { vendors as fallbackVendors } from '@/lib/data';
 
 export default async function Dashboard() {
-  const vendors = await getVendors();
+  const vendors = await getVendors().catch(() => fallbackVendors);
   const getImage = (id: string) => PlaceHolderImages.find(img => img.id === id);
 
   return (

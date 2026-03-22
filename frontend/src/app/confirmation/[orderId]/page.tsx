@@ -7,10 +7,11 @@ import { CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getOrder } from "@/lib/api";
+import { orders as fallbackOrders } from "@/lib/data";
 
 export default async function ConfirmationPage({ params }: { params: Promise<{ orderId: string }> }) {
     const { orderId } = await params;
-    const order = await getOrder(orderId).catch(() => null);
+    const order = await getOrder(orderId).catch(() => fallbackOrders.find((entry) => entry.id === orderId) ?? null);
 
     if (!order) {
         notFound();
@@ -51,23 +52,34 @@ export default async function ConfirmationPage({ params }: { params: Promise<{ o
         }
     }
 
+    const qrValue = JSON.stringify({
+        orderId: order.id,
+        pickupTime: order.pickupTime,
+        total: order.total,
+        items: order.items.map((item) => ({ id: item.id, quantity: item.quantity })),
+    });
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex min-h-screen flex-col bg-[radial-gradient(circle_at_top,_rgba(31,158,234,0.12),_transparent_25%),linear-gradient(180deg,_#fdf7ef_0%,_#f8fbff_55%,_#f2faf6_100%)]">
             <Header />
             <main className="flex-1 flex items-center justify-center p-4 md:p-8">
-                <Card className="w-full max-w-md shadow-lg">
+                <Card className="w-full max-w-xl overflow-hidden rounded-[2rem] border-white/60 bg-white/85 shadow-[0_35px_120px_-50px_rgba(15,23,42,0.4)] backdrop-blur">
                     <CardHeader className="text-center">
-                        <div className={`mx-auto ${getStatusColor()} rounded-full p-3 w-fit`}>
+                        <div className={`mx-auto ${getStatusColor()} rounded-full p-4 w-fit shadow-sm`}>
                             {getStatusIcon()}
                         </div>
-                        <CardTitle className="mt-4 text-2xl font-headline">Order {order.status}!</CardTitle>
+                        <CardTitle className="mt-4 text-3xl font-black font-headline tracking-[-0.04em]">Order {order.status}!</CardTitle>
                         <CardDescription>{getStatusDescription()}</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
                         {order.status !== 'Cancelled' && (
-                            <div className="flex justify-center">
-                                <QrCodePlaceholder />
+                            <div className="rounded-[1.75rem] border border-primary/10 bg-[linear-gradient(180deg,rgba(31,158,234,0.06),rgba(255,255,255,0.96))] p-5">
+                                <div className="flex justify-center">
+                                    <QrCodePlaceholder value={qrValue} title={`Order ${order.id.toUpperCase()} QR code`} />
+                                </div>
+                                <p className="mt-4 text-center text-sm text-muted-foreground">
+                                    Present this live QR code at pickup. It contains your order number, pickup slot, and item summary.
+                                </p>
                             </div>
                         )}
                         <Separator />

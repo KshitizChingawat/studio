@@ -6,28 +6,45 @@ const {
   menuItems,
   orders,
   kdsOrders,
-  vendorDashboard
+  vendorDashboard,
+  vendorAccounts
 } = require("./data");
 
 const app = express();
 const port = process.env.PORT || 4000;
 
+const allowedOrigins = process.env.CORS_ORIGIN
+  ? process.env.CORS_ORIGIN.split(",").map((origin) => origin.trim().replace(/\/+$/, ""))
+  : null;
+
 app.use(cors({
-  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(",") : true
+  origin: (origin, callback) => {
+    if (!allowedOrigins || !origin) {
+      return callback(null, true);
+    }
+
+    const normalizedOrigin = origin.replace(/\/+$/, "");
+    return callback(null, allowedOrigins.includes(normalizedOrigin));
+  }
 }));
 app.use(express.json());
 
 function buildPickupTimes({ currentTime, menuItems: selectedItems }) {
   const base = new Date(currentTime);
-  const itemCount = Array.isArray(selectedItems) ? selectedItems.length : 0;
-  const spacingMinutes = Math.max(10, itemCount * 5);
+  const baseMinutes = base.getMinutes();
+  const remainder = baseMinutes % 15;
+  const firstOffset = remainder === 0 ? 15 : 15 - remainder;
+  const firstSlot = new Date(base.getTime() + firstOffset * 60000);
 
   return [
-    "Immediately",
-    new Date(base.getTime() + spacingMinutes * 60000).toISOString(),
-    new Date(base.getTime() + (spacingMinutes + 10) * 60000).toISOString(),
-    new Date(base.getTime() + (spacingMinutes + 25) * 60000).toISOString()
+    firstSlot.toISOString(),
+    new Date(firstSlot.getTime() + 15 * 60000).toISOString(),
+    new Date(firstSlot.getTime() + 30 * 60000).toISOString()
   ];
+}
+
+function isStrongEnoughPassword(password) {
+  return typeof password === "string" && password.trim().length >= 8;
 }
 
 app.get("/health", (_req, res) => {
@@ -36,6 +53,59 @@ app.get("/health", (_req, res) => {
 
 app.get("/api/campuses", (_req, res) => {
   res.json(campuses);
+});
+
+app.post("/api/auth/student-login", (req, res) => {
+  const { campusId, email, password } = req.body || {};
+  const normalizedEmail = String(email || "").trim().toLowerCase();
+  const normalizedCampusId = String(campusId || "").trim();
+  const campus = campuses.find((entry) => entry.id === normalizedCampusId);
+
+  if (!campus || !normalizedEmail || !password) {
+    return res.status(400).json({ message: "Campus, email, and password are required." });
+  }
+
+  if (!normalizedEmail.endsWith(`@${campus.emailDomain}`)) {
+    return res.status(401).json({ message: `Use your ${campus.name} student email address.` });
+  }
+
+  if (!isStrongEnoughPassword(password)) {
+    return res.status(401).json({ message: "Password must be at least 8 characters long." });
+  }
+
+  return res.json({
+    ok: true,
+    user: {
+      campusId: campus.id,
+      campusName: campus.name,
+      email: normalizedEmail,
+      role: "student"
+    }
+  });
+});
+
+app.post("/api/auth/vendor-login", (req, res) => {
+  const { email, password } = req.body || {};
+  const normalizedEmail = String(email || "").trim().toLowerCase();
+  const account = vendorAccounts.find((entry) => entry.email === normalizedEmail);
+
+  if (!normalizedEmail || !password) {
+    return res.status(400).json({ message: "Email and password are required." });
+  }
+
+  if (!account || account.password !== password) {
+    return res.status(401).json({ message: "Invalid vendor credentials." });
+  }
+
+  return res.json({
+    ok: true,
+    user: {
+      email: account.email,
+      displayName: account.displayName,
+      vendorId: account.vendorId,
+      role: "vendor"
+    }
+  });
 });
 
 app.get("/api/vendors", (_req, res) => {

@@ -5,7 +5,14 @@ import { QrCodePlaceholder } from "@/components/qr-code-placeholder";
 import { QrCode, CheckCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
-export default function ScannerPage() {
+export default async function ScannerPage() {
+  const sampleQrValue = JSON.stringify({
+    orderId: "XYZ123",
+    customer: "Jane Doe",
+    pickupTime: "11:30 AM",
+    total: 145.58,
+  });
+
   return (
     <div className="space-y-6 flex flex-col items-center">
       <div className="text-center">
@@ -36,7 +43,7 @@ export default function ScannerPage() {
                 </DialogHeader>
                 <div className="space-y-4 py-4">
                     <div className="flex justify-center">
-                      <QrCodePlaceholder size={120} />
+                      <QrCodePlaceholder size={120} value={sampleQrValue} title="Scanned order QR code" />
                     </div>
                     <Separator/>
                     <div className="space-y-1 text-sm">

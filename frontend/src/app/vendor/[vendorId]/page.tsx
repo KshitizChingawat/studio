@@ -4,12 +4,13 @@ import Image from 'next/image';
 import { Header } from '@/components/header';
 import { MenuAndCart } from './components/menu-and-cart';
 import { getVendor, getVendorMenu } from '@/lib/api';
+import { menuItems as fallbackMenuItems, vendors as fallbackVendors, type MenuItem } from '@/lib/data';
 
 export default async function VendorPage({ params }: { params: Promise<{ vendorId: string }> }) {
   const { vendorId } = await params;
   const [vendor, currentMenuItems] = await Promise.all([
-    getVendor(vendorId).catch(() => null),
-    getVendorMenu(vendorId).catch(() => null),
+    getVendor(vendorId).catch(() => fallbackVendors.find((entry) => entry.id === vendorId) ?? null),
+    getVendorMenu(vendorId).catch(() => fallbackMenuItems[vendorId] as MenuItem[] | undefined),
   ]);
   
   if (!vendor || !currentMenuItems) {

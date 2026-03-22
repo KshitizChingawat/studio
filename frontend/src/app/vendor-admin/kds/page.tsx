@@ -3,9 +3,10 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { getKdsOrders } from "@/lib/api";
+import { kdsOrders as fallbackKdsOrders } from "@/lib/data";
 
 export default async function KdsPage() {
-    const kdsOrders = await getKdsOrders();
+    const kdsOrders = await getKdsOrders().catch(() => fallbackKdsOrders);
 
     return (
         <div className="space-y-6">

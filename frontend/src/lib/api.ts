@@ -1,5 +1,6 @@
 import 'server-only';
 
+import { normalizeBaseUrl } from '@/lib/env';
 import type {
   Campus,
   KdsOrder,
@@ -10,7 +11,7 @@ import type {
   VendorDashboardData,
 } from '@/lib/types';
 
-const API_BASE_URL = process.env.API_BASE_URL || process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API_BASE_URL = normalizeBaseUrl(process.env.API_BASE_URL || process.env.NEXT_PUBLIC_API_URL);
 
 async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {

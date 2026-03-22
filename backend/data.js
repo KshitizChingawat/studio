@@ -1,8 +1,8 @@
 const campuses = [
-  { id: "medi-caps", name: "Medi-Caps University", emailPlaceholder: "student@medicaps.ac.in" },
-  { id: "ips", name: "IPS University", emailPlaceholder: "student@ips.in" },
-  { id: "acropolis", name: "Acropolis University", emailPlaceholder: "student@acropolis.in" },
-  { id: "sage", name: "Sage University", emailPlaceholder: "student@sage.in" }
+  { id: "medi-caps", name: "Medi-Caps University", emailPlaceholder: "student@medicaps.ac.in", emailDomain: "medicaps.ac.in" },
+  { id: "ips", name: "IPS University", emailPlaceholder: "student@ips.in", emailDomain: "ips.in" },
+  { id: "acropolis", name: "Acropolis University", emailPlaceholder: "student@acropolis.in", emailDomain: "acropolis.in" },
+  { id: "sage", name: "Sage University", emailPlaceholder: "student@sage.in", emailDomain: "sage.in" }
 ];
 
 const vendors = [
@@ -106,11 +106,18 @@ const vendorDashboard = {
   ]
 };
 
+const vendorAccounts = [
+  { email: "foodcourt@campuspreorder.com", password: "Vendor@123", vendorId: "vendor-1", displayName: "Food Court Manager" },
+  { email: "canteen@campuspreorder.com", password: "Vendor@123", vendorId: "vendor-2", displayName: "Canteen Manager" },
+  { email: "mintoo@campuspreorder.com", password: "Vendor@123", vendorId: "vendor-3", displayName: "Mintoo Manager" }
+];
+
 module.exports = {
   campuses,
   vendors,
   menuItems,
   orders,
   kdsOrders,
-  vendorDashboard
+  vendorDashboard,
+  vendorAccounts
 };

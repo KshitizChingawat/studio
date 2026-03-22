@@ -7,9 +7,10 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { getVendorMenu } from "@/lib/api";
+import { menuItems as fallbackMenuItems } from "@/lib/data";
 
 export default async function MenuPage() {
-    const vendorMenu = await getVendorMenu('vendor-1');
+    const vendorMenu = await getVendorMenu('vendor-1').catch(() => fallbackMenuItems['vendor-1']);
 
     return (
         <div className="space-y-6">

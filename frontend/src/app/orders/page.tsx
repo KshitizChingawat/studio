@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, Clock, ShoppingBag } from "lucide-react";
 import { getOrders } from "@/lib/api";
 import type { Order } from "@/lib/types";
+import { orders as fallbackOrders } from "@/lib/data";
 
 
 const OrderCard = ({ order, isCurrent = false }: { order: Order, isCurrent?: boolean }) => (
@@ -43,7 +44,7 @@ const OrderCard = ({ order, isCurrent = false }: { order: Order, isCurrent?: boo
 );
 
 export default async function OrdersPage() {
-    const orders = await getOrders();
+    const orders = await getOrders().catch(() => fallbackOrders);
     const currentOrder = orders.find(o => o.status === "In Progress");
     const pastOrders = orders.filter(o => o.status !== "In Progress");
 
