@@ -32,7 +32,6 @@ function SubmitButton({ disabled }: { disabled: boolean }) {
 }
 
 export default function LoginPage() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === 'login-hero');
   const burgerImage = PlaceHolderImages.find((img) => img.id === 'menu-burger');
   const pizzaImage = PlaceHolderImages.find((img) => img.id === 'menu-pizza');
   const shakeImage = PlaceHolderImages.find((img) => img.id === 'menu-shake');
@@ -180,17 +179,7 @@ export default function LoginPage() {
             </CardContent>
           </Card>
 
-          <div className="relative hidden min-h-[720px] overflow-hidden rounded-[2rem] border border-white/60 bg-[linear-gradient(160deg,#fff9f1_0%,#ffe9d8_22%,#dff5ff_58%,#17315c_100%)] shadow-[0_35px_120px_-50px_rgba(15,23,42,0.55)] lg:block">
-            {heroImage && (
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                data-ai-hint={heroImage.imageHint}
-                fill
-                priority
-                className="object-cover"
-              />
-            )}
+          <div className="relative hidden min-h-[720px] overflow-hidden rounded-[2rem] border border-white/60 bg-[radial-gradient(circle_at_top_left,#fff2dc_0%,#ffe7c7_14%,#dbf5ff_40%,#5c8cd6_72%,#17315c_100%)] shadow-[0_35px_120px_-50px_rgba(15,23,42,0.55)] lg:block">
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,18,38,0.08)_0%,rgba(15,23,42,0.22)_42%,rgba(9,20,44,0.58)_100%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.38),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.36),transparent_28%),radial-gradient(circle_at_center,rgba(255,255,255,0.16),transparent_45%)]" />
 
@@ -245,6 +234,20 @@ export default function LoginPage() {
                 <div className="mt-3 text-white">
                   <p className="text-xs uppercase tracking-[0.28em] text-orange-100/80">Rush Favorite</p>
                   <p className="mt-1 text-lg font-black font-headline">Pepperoni Slice</p>
+                </div>
+              </div>
+            )}
+
+            {burgerImage && (
+              <div className="absolute left-1/2 top-[10.5rem] z-0 h-64 w-64 -translate-x-1/2 rounded-full border border-white/25 bg-white/12 p-4 shadow-[0_20px_80px_-20px_rgba(8,17,38,0.55)] backdrop-blur-2xl">
+                <div className="relative h-full w-full overflow-hidden rounded-full">
+                  <Image
+                    src={burgerImage.imageUrl}
+                    alt=""
+                    data-ai-hint={burgerImage.imageHint}
+                    fill
+                    className="object-cover opacity-90"
+                  />
                 </div>
               </div>
             )}
@@ -314,9 +317,6 @@ export default function LoginPage() {
               <h3 className="mt-3 max-w-[24rem] text-3xl font-black font-headline leading-tight tracking-[-0.04em]">
                 A login screen that already tastes like the menu inside.
               </h3>
-              <p className="mt-3 max-w-lg text-sm leading-6 text-white/80">
-                Floating food visuals, live-looking activity cards, and subtle motion help the first screen feel premium without getting in the way of sign-in.
-              </p>
             </div>
           </div>
         </div>
