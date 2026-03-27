@@ -33,6 +33,10 @@ function SubmitButton({ disabled }: { disabled: boolean }) {
 
 export default function LoginPage() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'login-hero');
+  const burgerImage = PlaceHolderImages.find((img) => img.id === 'menu-burger');
+  const pizzaImage = PlaceHolderImages.find((img) => img.id === 'menu-pizza');
+  const shakeImage = PlaceHolderImages.find((img) => img.id === 'menu-shake');
+  const friesImage = PlaceHolderImages.find((img) => img.id === 'menu-fries');
   const [state, formAction, pending] = useActionState<{ error?: string }, FormData>(studentLoginAction, initialState);
   const [selectedCampusId, setSelectedCampusId] = useState('');
   const [email, setEmail] = useState('');
@@ -187,34 +191,130 @@ export default function LoginPage() {
                 className="object-cover"
               />
             )}
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.08)_0%,rgba(2,6,23,0.8)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.26),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.24),transparent_32%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.2)_0%,rgba(2,6,23,0.88)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.28),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.28),transparent_30%),radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_45%)]" />
 
-            <div className="absolute inset-x-8 top-8 rounded-[1.5rem] border border-white/20 bg-white/10 p-5 text-white backdrop-blur">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">Live Campus Pulse</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-3">
+            <div className="absolute -right-10 top-24 h-48 w-48 rounded-full bg-accent/20 blur-3xl" />
+            <div className="absolute left-10 top-28 h-44 w-44 rounded-full bg-cyan-300/15 blur-3xl" />
+
+            <div className="absolute inset-x-8 top-8 rounded-[1.5rem] border border-white/15 bg-white/10 p-5 text-white backdrop-blur-xl">
+              <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-3xl font-black font-headline">15m</p>
-                  <p className="text-sm text-white/75">Pickup interval rhythm</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">Today&apos;s Flavor Flow</p>
+                  <h2 className="mt-3 text-3xl font-black font-headline leading-tight tracking-[-0.04em]">
+                    Fresh meals, animated pickup rhythm, and a campus vibe that actually feels alive.
+                  </h2>
                 </div>
-                <div>
-                  <p className="text-3xl font-black font-headline">3x</p>
-                  <p className="text-sm text-white/75">Faster queue movement</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-black font-headline">Scan</p>
-                  <p className="text-sm text-white/75">Ready QR confirmation</p>
+                <div className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-cyan-100">
+                  Live
                 </div>
               </div>
             </div>
 
+            {burgerImage && (
+              <div className="animate-float-gentle absolute left-8 top-48 w-44 rounded-[1.7rem] border border-white/20 bg-white/12 p-3 shadow-2xl backdrop-blur-xl">
+                <div className="relative h-44 overflow-hidden rounded-[1.2rem]">
+                  <Image
+                    src={burgerImage.imageUrl}
+                    alt={burgerImage.description}
+                    data-ai-hint={burgerImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="mt-3 text-white">
+                  <p className="text-xs uppercase tracking-[0.28em] text-white/55">Chef Pick</p>
+                  <p className="mt-1 text-xl font-black font-headline">Classic Burger</p>
+                  <p className="text-sm text-white/70">Hot grill, ready for pickup.</p>
+                </div>
+              </div>
+            )}
+
+            {pizzaImage && (
+              <div className="animate-float-slow absolute right-10 top-60 w-40 rounded-[1.6rem] border border-white/20 bg-slate-950/55 p-3 shadow-2xl backdrop-blur-xl">
+                <div className="relative h-40 overflow-hidden rounded-[1.15rem]">
+                  <Image
+                    src={pizzaImage.imageUrl}
+                    alt={pizzaImage.description}
+                    data-ai-hint={pizzaImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="mt-3 text-white">
+                  <p className="text-xs uppercase tracking-[0.28em] text-orange-200/80">Rush Favorite</p>
+                  <p className="mt-1 text-lg font-black font-headline">Pepperoni Slice</p>
+                </div>
+              </div>
+            )}
+
+            <div className="absolute left-1/2 top-[46%] w-[22rem] -translate-x-1/2 rounded-[1.75rem] border border-white/15 bg-slate-950/45 p-5 text-white shadow-2xl backdrop-blur-md">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.3em] text-white/55">Live Campus Pulse</p>
+                  <p className="mt-2 text-4xl font-black font-headline">15m</p>
+                </div>
+                <div className="rounded-2xl bg-white/10 px-4 py-2 text-right">
+                  <p className="text-xs uppercase tracking-[0.24em] text-white/55">Peak Window</p>
+                  <p className="mt-1 text-lg font-bold">12:15 PM</p>
+                </div>
+              </div>
+              <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
+                <div className="animate-pulse-line h-full w-2/3 rounded-full bg-[linear-gradient(90deg,#38bdf8,#fb923c,#4ade80)]" />
+              </div>
+              <div className="mt-5 grid grid-cols-3 gap-3 text-sm">
+                <div className="rounded-2xl bg-white/8 p-3">
+                  <p className="text-2xl font-black font-headline">3x</p>
+                  <p className="text-white/65">Faster queue movement</p>
+                </div>
+                <div className="rounded-2xl bg-white/8 p-3">
+                  <p className="text-2xl font-black font-headline">28</p>
+                  <p className="text-white/65">Orders this hour</p>
+                </div>
+                <div className="rounded-2xl bg-white/8 p-3">
+                  <p className="text-2xl font-black font-headline">Scan</p>
+                  <p className="text-white/65">Ready QR confirmation</p>
+                </div>
+              </div>
+            </div>
+
+            {shakeImage && (
+              <div className="animate-float-gentle absolute bottom-28 left-12 w-36 rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-lg [animation-delay:1.2s]">
+                <div className="relative h-36 overflow-hidden rounded-[1rem]">
+                  <Image
+                    src={shakeImage.imageUrl}
+                    alt={shakeImage.description}
+                    data-ai-hint={shakeImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-3 text-center text-sm font-semibold text-white">Chocolate Shake</p>
+              </div>
+            )}
+
+            {friesImage && (
+              <div className="animate-float-slow absolute bottom-24 right-14 w-36 rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-lg [animation-delay:2.4s]">
+                <div className="relative h-36 overflow-hidden rounded-[1rem]">
+                  <Image
+                    src={friesImage.imageUrl}
+                    alt={friesImage.description}
+                    data-ai-hint={friesImage.imageHint}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-3 text-center text-sm font-semibold text-white">Golden Fries</p>
+              </div>
+            )}
+
             <div className="absolute inset-x-8 bottom-8 rounded-[1.75rem] border border-white/15 bg-slate-950/50 p-6 text-white backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">Student Experience</p>
-              <h2 className="mt-3 text-3xl font-black font-headline leading-tight tracking-[-0.04em]">
-                Designed for crowded lunch windows, built for every screen.
-              </h2>
+              <h3 className="mt-3 text-3xl font-black font-headline leading-tight tracking-[-0.04em]">
+                A login screen that already tastes like the menu inside.
+              </h3>
               <p className="mt-3 max-w-md text-sm leading-6 text-white/75">
-                Responsive layouts, cleaner typography, animated surfaces, and protected routing keep the experience smooth from mobile phones to laptop dashboards.
+                Floating food visuals, live-looking activity cards, and subtle motion help the first screen feel premium without getting in the way of sign-in.
               </p>
             </div>
           </div>
