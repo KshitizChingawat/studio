@@ -180,7 +180,7 @@ export default function LoginPage() {
             </CardContent>
           </Card>
 
-          <div className="relative hidden min-h-[720px] overflow-hidden rounded-[2rem] border border-white/50 bg-slate-950 shadow-[0_35px_120px_-50px_rgba(15,23,42,0.9)] lg:block">
+          <div className="relative hidden min-h-[720px] overflow-hidden rounded-[2rem] border border-white/60 bg-[linear-gradient(160deg,#fff7ef_0%,#fde8d7_18%,#dff4ff_52%,#0f2041_100%)] shadow-[0_35px_120px_-50px_rgba(15,23,42,0.65)] lg:block">
             {heroImage && (
               <Image
                 src={heroImage.imageUrl}
@@ -191,13 +191,14 @@ export default function LoginPage() {
                 className="object-cover"
               />
             )}
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.2)_0%,rgba(2,6,23,0.88)_100%)]" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.28),transparent_26%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.28),transparent_30%),radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_45%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,18,38,0.18)_0%,rgba(15,23,42,0.48)_52%,rgba(8,17,38,0.72)_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.32),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.32),transparent_28%),radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_45%)]" />
 
-            <div className="absolute -right-10 top-24 h-48 w-48 rounded-full bg-accent/20 blur-3xl" />
-            <div className="absolute left-10 top-28 h-44 w-44 rounded-full bg-cyan-300/15 blur-3xl" />
+            <div className="absolute -right-10 top-24 h-48 w-48 rounded-full bg-accent/25 blur-3xl" />
+            <div className="absolute left-10 top-28 h-44 w-44 rounded-full bg-cyan-300/20 blur-3xl" />
+            <div className="absolute bottom-16 left-16 h-36 w-36 rounded-full bg-amber-200/20 blur-3xl" />
 
-            <div className="absolute inset-x-8 top-8 rounded-[1.5rem] border border-white/15 bg-white/10 p-5 text-white backdrop-blur-xl">
+            <div className="absolute inset-x-8 top-8 rounded-[1.5rem] border border-white/20 bg-white/14 p-5 text-white backdrop-blur-xl">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">Today&apos;s Flavor Flow</p>
@@ -212,7 +213,7 @@ export default function LoginPage() {
             </div>
 
             {burgerImage && (
-              <div className="animate-float-gentle absolute left-8 top-48 w-44 rounded-[1.7rem] border border-white/20 bg-white/12 p-3 shadow-2xl backdrop-blur-xl">
+              <div className="animate-float-gentle absolute left-8 top-48 z-10 w-44 rounded-[1.7rem] border border-white/30 bg-white/18 p-3 shadow-2xl backdrop-blur-xl">
                 <div className="relative h-44 overflow-hidden rounded-[1.2rem]">
                   <Image
                     src={burgerImage.imageUrl}
@@ -231,7 +232,7 @@ export default function LoginPage() {
             )}
 
             {pizzaImage && (
-              <div className="animate-float-slow absolute right-10 top-60 w-40 rounded-[1.6rem] border border-white/20 bg-slate-950/55 p-3 shadow-2xl backdrop-blur-xl">
+              <div className="animate-float-slow absolute right-10 top-56 z-10 w-40 rounded-[1.6rem] border border-white/25 bg-white/16 p-3 shadow-2xl backdrop-blur-xl">
                 <div className="relative h-40 overflow-hidden rounded-[1.15rem]">
                   <Image
                     src={pizzaImage.imageUrl}
@@ -242,13 +243,13 @@ export default function LoginPage() {
                   />
                 </div>
                 <div className="mt-3 text-white">
-                  <p className="text-xs uppercase tracking-[0.28em] text-orange-200/80">Rush Favorite</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-orange-100/80">Rush Favorite</p>
                   <p className="mt-1 text-lg font-black font-headline">Pepperoni Slice</p>
                 </div>
               </div>
             )}
 
-            <div className="absolute left-1/2 top-[46%] w-[22rem] -translate-x-1/2 rounded-[1.75rem] border border-white/15 bg-slate-950/45 p-5 text-white shadow-2xl backdrop-blur-md">
+            <div className="absolute left-1/2 top-[44%] z-20 w-[22rem] -translate-x-1/2 rounded-[1.75rem] border border-white/20 bg-slate-950/48 p-5 text-white shadow-2xl backdrop-blur-md">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-white/55">Live Campus Pulse</p>
@@ -279,7 +280,7 @@ export default function LoginPage() {
             </div>
 
             {shakeImage && (
-              <div className="animate-float-gentle absolute bottom-28 left-12 w-36 rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-lg [animation-delay:1.2s]">
+              <div className="animate-float-gentle absolute bottom-40 left-10 z-10 w-36 rounded-[1.5rem] border border-white/25 bg-white/18 p-3 shadow-2xl backdrop-blur-lg [animation-delay:1.2s]">
                 <div className="relative h-36 overflow-hidden rounded-[1rem]">
                   <Image
                     src={shakeImage.imageUrl}
@@ -294,7 +295,7 @@ export default function LoginPage() {
             )}
 
             {friesImage && (
-              <div className="animate-float-slow absolute bottom-24 right-14 w-36 rounded-[1.5rem] border border-white/20 bg-white/10 p-3 shadow-2xl backdrop-blur-lg [animation-delay:2.4s]">
+              <div className="animate-float-slow absolute bottom-40 right-10 z-10 w-36 rounded-[1.5rem] border border-white/25 bg-white/18 p-3 shadow-2xl backdrop-blur-lg [animation-delay:2.4s]">
                 <div className="relative h-36 overflow-hidden rounded-[1rem]">
                   <Image
                     src={friesImage.imageUrl}
@@ -308,7 +309,7 @@ export default function LoginPage() {
               </div>
             )}
 
-            <div className="absolute inset-x-8 bottom-8 rounded-[1.75rem] border border-white/15 bg-slate-950/50 p-6 text-white backdrop-blur-md">
+            <div className="absolute inset-x-8 bottom-8 z-20 rounded-[1.75rem] border border-white/20 bg-[linear-gradient(135deg,rgba(7,18,44,0.78),rgba(17,33,76,0.68))] p-6 text-white shadow-[0_18px_60px_-30px_rgba(8,17,38,0.95)] backdrop-blur-md">
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">Student Experience</p>
               <h3 className="mt-3 text-3xl font-black font-headline leading-tight tracking-[-0.04em]">
                 A login screen that already tastes like the menu inside.
