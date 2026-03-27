@@ -238,20 +238,6 @@ export default function LoginPage() {
               </div>
             )}
 
-            {burgerImage && (
-              <div className="absolute left-1/2 top-[10.5rem] z-0 h-64 w-64 -translate-x-1/2 rounded-full border border-white/25 bg-white/12 p-4 shadow-[0_20px_80px_-20px_rgba(8,17,38,0.55)] backdrop-blur-2xl">
-                <div className="relative h-full w-full overflow-hidden rounded-full">
-                  <Image
-                    src={burgerImage.imageUrl}
-                    alt=""
-                    data-ai-hint={burgerImage.imageHint}
-                    fill
-                    className="object-cover opacity-90"
-                  />
-                </div>
-              </div>
-            )}
-
             <div className="absolute left-1/2 top-[40%] z-20 w-[22rem] -translate-x-1/2 rounded-[1.75rem] border border-white/25 bg-[linear-gradient(180deg,rgba(11,24,52,0.58),rgba(12,23,43,0.72))] p-5 text-white shadow-2xl backdrop-blur-md">
               <div className="flex items-center justify-between">
                 <div>
